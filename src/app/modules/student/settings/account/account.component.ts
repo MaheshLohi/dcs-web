@@ -31,13 +31,13 @@ export class SettingsAccountComponent implements OnInit
     {
         // Create the form
         this.accountForm = this._formBuilder.group({
-            name    : ['Brian Hughes'],
+            name    : ['Preetham Raju'],
             username: ['brianh'],
-            title   : ['Senior Frontend Developer'],
-            company : ['YXZ Software'],
-            about   : ['Hey! This is Brian; husband, father and gamer. I\'m mostly passionate about bleeding edge tech and chocolate! 🍫'],
-            email   : ['hughes.brian@mail.com', Validators.email],
-            phone   : ['121-490-33-12'],
+            title   : ['Mechanical Engineering'],
+            company : ['1MS16ME184'],
+            about   : [' I am excited to start my studies and can\'t wait to see what the future holds for me. I\'m confident that I have what it takes to be a, and I\'m looking forward to making a difference in the world.'],
+            email   : ['PreethamRaju@mail.com', Validators.email],
+            phone   : ['+91 9682345678'],
             country : ['usa'],
             language: ['english']
         });
