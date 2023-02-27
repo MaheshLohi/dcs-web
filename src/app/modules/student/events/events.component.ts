@@ -1,11 +1,11 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
+  selector: 'app-events',
+  templateUrl: './events.component.html',
   encapsulation: ViewEncapsulation.None
 })
-export class DashboardComponent {
+export class EventsComponent {
   /* Constructor*/
   constructor() {
   }

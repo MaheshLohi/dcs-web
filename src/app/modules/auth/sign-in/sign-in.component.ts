@@ -4,6 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { fuseAnimations } from '@fuse/animations';
 import { FuseAlertType } from '@fuse/components/alert';
 import { AuthService } from 'app/core/auth/auth.service';
+import { DataService } from 'app/services/data.service';
+import { environment } from 'app/environments/environment';
+import { endpoint } from 'app/services/endpoints';
 
 @Component({
     selector     : 'auth-sign-in',
@@ -11,8 +14,7 @@ import { AuthService } from 'app/core/auth/auth.service';
     encapsulation: ViewEncapsulation.None,
     animations   : fuseAnimations
 })
-export class AuthSignInComponent implements OnInit
-{
+export class AuthSignInComponent implements OnInit {
     @ViewChild('signInNgForm') signInNgForm: NgForm;
 
     alert: { type: FuseAlertType; message: string } = {
@@ -22,27 +24,19 @@ export class AuthSignInComponent implements OnInit
     signInForm: UntypedFormGroup;
     showAlert: boolean = false;
 
-    /**
-     * Constructor
-     */
+    /** Constructor */
     constructor(
         private _activatedRoute: ActivatedRoute,
         private _authService: AuthService,
         private _formBuilder: UntypedFormBuilder,
-        private _router: Router
-    )
-    {
+        private _router: Router,
+        private _dataService:DataService
+    ){
+
     }
 
-    // -----------------------------------------------------------------------------------------------------
-    // @ Lifecycle hooks
-    // -----------------------------------------------------------------------------------------------------
-
-    /**
-     * On init
-     */
-    ngOnInit(): void
-    {
+    /** On init */
+    ngOnInit(): void {
         // Create the form
         this.signInForm = this._formBuilder.group({
             email     : ['hughes.brian@company.com', [Validators.required, Validators.email]],
@@ -51,17 +45,28 @@ export class AuthSignInComponent implements OnInit
         });
 
         this. signIn();
+        this.logIn();
     }
 
-    // -----------------------------------------------------------------------------------------------------
-    // @ Public methods
-    // -----------------------------------------------------------------------------------------------------
+    logIn(): void {
+        let data = {
+            "email":"admin@nhce.com"
+        }
+        this._dataService.postData(endpoint.auth.getToken, data).subscribe((response)=> {
+            console.log("response", response.data.auth_codeponse);
+            let tokenData = {
+                auth_code:response.data.auth_code
+            }
+            this._dataService.postData(endpoint.auth.postToken, tokenData).subscribe((resp) => {
+                console.log("resp", resp);
+            });
+        },(error)=> {
+            console.log("error", error);
+        });
+    }
 
-    /**
-     * Sign in
-     */
-    signIn(): void
-    {
+    /** Sign in */
+    signIn(): void {
         // Return if the form is invalid
         if ( this.signInForm.invalid )
         {
@@ -107,5 +112,6 @@ export class AuthSignInComponent implements OnInit
                     this.showAlert = true;
                 }
             );
+
     }
 }

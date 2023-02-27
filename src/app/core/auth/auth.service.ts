@@ -91,6 +91,21 @@ export class AuthService
         );
     }
 
+
+    loginUsingToken(): Observable<any> {
+        return this._httpClient.post('api/auth/sign-in-with-token', {
+
+        }).pipe(
+            catchError(() =>
+                of(false)
+            ), 
+            switchMap((response: any) => {
+                console.log('response', response);
+            return response;
+        })
+        );
+    }
+
     /**
      * Sign in using the access token
      */

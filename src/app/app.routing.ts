@@ -43,10 +43,9 @@ export const appRoutes: Route[] = [
         },
         children: [
             { path: 'connect', loadChildren: () => import('app/modules/student/connect/connect.module').then(m => m.ConnectModule)},
-            { path: 'dashboard', loadChildren: () => import('app/modules/student/dashboard/dashboard.module').then(m => m.DashboardModule)},
+            { path: 'events', loadChildren: () => import('app/modules/student/events/events.module').then(m => m.EventsModule)},
             { path: 'assignment', loadChildren: () => import('app/modules/student/assignment/assignment.module').then(m => m.AssignmentModule)},
             { path: 'test', loadChildren: () => import('app/modules/student/test/test.module').then(m => m.TestModule)},
-            { path: 'schedule', loadChildren: () => import('app/modules/student/schedule/schedule.module').then(m => m.ScheduleModule)},
             { path: 'support', loadChildren: () => import('app/modules/student/support/support.module').then(m => m.SupportModule)},
             { path: 'privacy-policy', loadChildren: () => import('app/modules/student/privacy-policy/privacy-policy.module').then(m => m.PrivacyPolicyModule)},
             { path: 'profile', loadChildren: () => import('app/modules/student/profile/profile.module').then(m => m.ProfileModule)},

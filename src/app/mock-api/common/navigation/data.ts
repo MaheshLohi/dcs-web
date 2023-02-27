@@ -4,18 +4,18 @@ import { FuseNavigationItem } from '@fuse/components/navigation';
 export const defaultNavigation: FuseNavigationItem[] = [
 
             {
-                id   : 'connect',
-                title: 'Connect',
+                id   : 'campusConnect',
+                title: 'Campus Connect',
                 type : 'basic',
                 icon : 'heroicons_outline:home',
                 link : '/student/connect'
             },
             {
-                id   : 'dashboard',
-                title: 'Dashboard',
+                id   : 'events',
+                title: 'Events',
                 type : 'basic',
                 icon : 'heroicons_outline:cube',
-                link : '/student/dashboard'
+                link : '/student/events'
             },
             {
                 id   : 'assignment',
@@ -25,18 +25,11 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link : '/student/assignment'
             },
             {
-                id   : 'test',
-                title: 'Test',
+                id   : 'challenges',
+                title: 'Challenges',
                 type : 'basic',
                 icon : 'heroicons_outline:library',
                 link : '/student/test'
-            },
-            {
-                id   : 'schedule',
-                title: 'Schedule',
-                type : 'basic',
-                icon : 'heroicons_outline:adjustments',
-                link : '/student/schedule'
             },
             {
             id      : 'preferences',

@@ -13,25 +13,21 @@
         <div class="flex flex-col items-start">
 
             <!-- Create Post -->
-            <fuse-card class="flex flex-col max-w-200 w-full p-6 sm:p-8 pb-6">
-                <div class="text-xl font-semibold">Create Post</div>
-                <div class="flex flex-col sm:flex-row items-start mt-4">
-                    <div class="flex items-center mb-6 sm:mb-0">
-                        <img
-                            class="w-12 min-w-12 h-12 rounded-full mr-4"
-                            src="assets/images/avatars/brian-hughes.jpg"
-                            alt="Card cover image">
-                        <div class="sm:hidden">Brian Hughes</div>
-                    </div>
+            <fuse-card class="flex flex-col max-w-200 w-full p-4">
+                <!-- <div class="text-xl font-semibold">Create Post</div> -->
 
-                    <mat-form-field
-                        class="w-full"
-                        [subscriptSizing]="'dynamic'">
-                    <input 
-                        [placeholder]="'What\'s on your mind?'"
-                        matInput (click)="addNewPost()">
+                <mat-form-field class="flex-auto0">
+                    <input autofocus [placeholder]="'Create post'" matInput (click)="addNewPost()">
+                    <mat-icon
+                        class="icon-size-5"
+                        matPrefix
+                        [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
+                    <mat-icon
+                        class="icon-size-5"
+                        matSuffix
+                        [svgIcon]="'heroicons_solid:plus-circle'"
+                        (click)="addNewPost()"></mat-icon>
                 </mat-form-field>
-                </div>
             </fuse-card>
 
             <!-- Post 1 -->
@@ -936,40 +932,24 @@
                 </div>
                 <div class="flex flex-col mt-5">
                     <div class="flex">
-                        <img
-                            class="w-10 h-10 mr-4 rounded-full"
-                            src="assets/images/avatars/female-01.jpg"
-                            alt="Card cover image">
                         <div class="flex flex-col min-w-0">
                             <div class="leading-tight">#UDBHAV2023</div>
                             <div class="text-md leading-none text-secondary mt-2">1768 posts</div>
                         </div>
                     </div>
                     <div class="flex mt-8">
-                        <img
-                            class="w-10 h-10 mr-4 rounded-full"
-                            src="assets/images/avatars/male-01.jpg"
-                            alt="Card cover image">
                         <div class="flex flex-col min-w-0">
                             <div class="leading-tight">#Hakathan2024</div>
                             <div class="text-md leading-none text-secondary mt-2">4893 posts</div>
                         </div>
                     </div>
                     <div class="flex mt-8">
-                        <img
-                            class="w-10 h-10 mr-4 rounded-full"
-                            src="assets/images/avatars/male-15.jpg"
-                            alt="Card cover image">
                         <div class="flex flex-col min-w-0">
                             <div class="leading-tight">#Batch2022</div>
                             <div class="text-md leading-none text-secondary mt-2">900 posts</div>
                         </div>
                     </div>
                     <div class="flex mt-8">
-                        <img
-                            class="w-10 h-10 mr-4 rounded-full"
-                            src="assets/images/avatars/female-15.jpg"
-                            alt="Card cover image">
                         <div class="flex flex-col min-w-0">
                             <div class="leading-tight">#NSS Group</div>
                             <div class="text-md leading-none text-secondary mt-2">9830 posts</div>
