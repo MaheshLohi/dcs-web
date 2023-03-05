@@ -16,6 +16,7 @@ import { SharedModule } from 'app/shared/shared.module';
 import { ConnectComponent } from 'app/modules/student/connect/connect.component';
 import { PostComponent  } from './posts/post.component';
 import { MatSelectModule } from '@angular/material/select';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 const connectRoutes: Route[] = [
     {
@@ -27,7 +28,7 @@ const connectRoutes: Route[] = [
 @NgModule({
     declarations: [
         ConnectComponent,
-        PostComponent
+        PostComponent,
     ],
     imports     : [
         RouterModule.forChild(connectRoutes),
@@ -45,6 +46,7 @@ const connectRoutes: Route[] = [
         MatLuxonDateModule,
         MatCheckboxModule,
         MatSelectModule,
+        CarouselModule,
     ]
 })
 export class ConnectModule

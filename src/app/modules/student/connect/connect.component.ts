@@ -1,3 +1,4 @@
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PostComponent } from 'app/modules/student/connect/posts/post.component';
@@ -5,11 +6,37 @@ import { PostComponent } from 'app/modules/student/connect/posts/post.component'
 @Component({
     selector     : 'connect',
     templateUrl  : './connect.component.html',
+    styleUrls    : ['./connect.component.scss'],
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ConnectComponent
 {
+  // Owlcarousel options
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: true,
+    pullDrag: false,
+    dots: true,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
 
   /* Constructor*/
   constructor(
