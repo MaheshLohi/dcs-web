@@ -11,6 +11,7 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
+import { TruncatePipe } from 'app/core/pipes/truncate.pipe';
 
 
 const routerConfig: ExtraOptions = {
@@ -21,6 +22,7 @@ const routerConfig: ExtraOptions = {
 @NgModule({
     declarations: [
         AppComponent,
+        TruncatePipe
     ],
     imports     : [
         BrowserModule,

@@ -18,6 +18,7 @@ export class ConnectComponent
     mouseDrag: false,
     touchDrag: true,
     pullDrag: false,
+    margin:10,
     dots: true,
     navSpeed: 700,
     navText: ['', ''],
@@ -29,13 +30,13 @@ export class ConnectComponent
         items: 2
       },
       740: {
-        items: 3
+        items: 2
       },
       940: {
-        items: 4
+        items: 3
       }
     },
-    nav: true
+    nav: false
   }
 
   /* Constructor*/

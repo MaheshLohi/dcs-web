@@ -3,6 +3,7 @@ import { Route, RouterModule } from '@angular/router';
 import { EventsComponent } from './events.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FuseCardModule } from '@fuse/components/card';
+import { TruncatePipe } from 'app/core/pipes/truncate.pipe';
 
 const eventsRoutes: Route[] = [
   {
@@ -13,7 +14,8 @@ const eventsRoutes: Route[] = [
 
 @NgModule({
   declarations: [
-    EventsComponent
+    EventsComponent,
+    TruncatePipe
   ],
   imports     : [
       RouterModule.forChild(eventsRoutes),
