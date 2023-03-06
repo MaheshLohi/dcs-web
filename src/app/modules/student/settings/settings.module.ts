@@ -8,6 +8,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FuseAlertModule } from '@fuse/components/alert';
 import { SharedModule } from 'app/shared/shared.module';
 import { SettingsComponent } from 'app/modules/student/settings/settings.component';
@@ -34,6 +36,8 @@ import { settingsRoutes } from 'app/modules/student/settings/settings.routing';
         MatSidenavModule,
         MatSlideToggleModule,
         FuseAlertModule,
+        MatNativeDateModule,
+        MatDatepickerModule,
         SharedModule
     ]
 })

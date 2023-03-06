@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormsModule, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
     selector       : 'settings-account',
@@ -32,14 +32,12 @@ export class SettingsAccountComponent implements OnInit
         // Create the form
         this.accountForm = this._formBuilder.group({
             name    : ['Preetham Raju'],
-            username: ['brianh'],
-            title   : ['Mechanical Engineering'],
-            company : ['1MS16ME184'],
-            about   : [' I am excited to start my studies and can\'t wait to see what the future holds for me. I\'m confident that I have what it takes to be a, and I\'m looking forward to making a difference in the world.'],
+            branch   : ['Mechanical Engineering'],
+            usn : ['1MS16ME184'],
             email   : ['PreethamRaju@mail.com', Validators.email],
             phone   : ['+91 9682345678'],
-            country : ['usa'],
-            language: ['english']
+            dateofbirth   : [''],
+            link    : ['']
         });
     }
 }

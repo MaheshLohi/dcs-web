@@ -45,24 +45,6 @@ export class AuthSignInComponent implements OnInit {
         });
 
         this. signIn();
-        this.logIn();
-    }
-
-    logIn(): void {
-        let data = {
-            "email":"admin@nhce.com"
-        }
-        this._dataService.postData(endpoint.auth.getToken, data).subscribe((response)=> {
-            console.log("response", response.data.auth_codeponse);
-            let tokenData = {
-                auth_code:response.data.auth_code
-            }
-            this._dataService.postData(endpoint.auth.postToken, tokenData).subscribe((resp) => {
-                console.log("resp", resp);
-            });
-        },(error)=> {
-            console.log("error", error);
-        });
     }
 
     /** Sign in */

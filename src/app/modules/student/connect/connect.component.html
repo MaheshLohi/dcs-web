@@ -1,35 +1,29 @@
 <div class="flex flex-col flex-auto min-w-0">
 
     <!-- Header -->
-    <div class="flex flex-col">
-        <div>
-            <owl-carousel-o [options]="customOptions">
-                <div>Some tags before</div>
-                <owl-carousel-o [options]="customOptions">
-                <ng-template carouselSlide>Slide 1</ng-template>  
-                <ng-template carouselSlide>Slide 2</ng-template>  
-                <ng-template carouselSlide>Slide 3</ng-template>  
-                </owl-carousel-o>
-                <div>Some tags after</div>
-            </owl-carousel-o>
+    <!-- <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
+        <div class="flex-1 min-w-0">
+            <div class="carousel-wrap">
+                <p>I am here</p>
+                <div class="max-w-200 w-full" style="border:2px solid orange;height:100px;">
+                    <div>Some tags before</div>
+                    <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide>Slide 1</ng-template>  
+                    <ng-template carouselSlide>Slide 2</ng-template>  
+                    <ng-template carouselSlide>Slide 3</ng-template>  
+                    </owl-carousel-o>
+                    <div>Some tags after</div>
+                </div>
+            </div>
         </div>
-    </div>
+    </div> -->
+
 
     <!-- Main -->
     <div class="flex flex-auto justify-center w-full max-w-full mx-auto p-6 sm:p-8">
 
         <!-- Column -->
         <div class="flex flex-col items-start">
-            
-            <div class="max-w-200 w-full" style="border:2px solid orange;height:100px;">
-                <div>Some tags before</div>
-                <owl-carousel-o [options]="customOptions">
-                  <ng-template carouselSlide>Slide 1</ng-template>  
-                  <ng-template carouselSlide>Slide 2</ng-template>  
-                  <ng-template carouselSlide>Slide 3</ng-template>  
-                </owl-carousel-o>
-                <div>Some tags after</div>
-            </div>
 
             <!-- Create Post -->
             <fuse-card class="flex flex-col max-w-200 w-full p-4">
